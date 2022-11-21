@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 Homework - My CV</title>
+    <link rel="shortcut icon"
+        href="./src/Google-Noto-Emoji-People-Profession-10303-man-office-worker-light-skin-tone.ico"
+        type="image/x-icon">
+</head>
+
+<body style="background-color: beige; font-family: Arial;">
+    <h1>Serik Zhaxylykov</h1>
+    <img src="src/photo.jpg" alt="My photo!" height="200">
+    <hr>
+    <h3>Мои навыки:</h3>
+    <ul>
+        <li><b>Критическое</b> мышление</li>
+        <li><i>Социальный интеллект</i></li>
+        <li><u>Информационная грамотность</u></li>
+        <li>Цифровая грамотность</li>
+        <li>Гибкость, готовность меняться</li>
+    </ul>
+    <hr>
+    <h3>Мои хобби:</h3>
+    <ol>
+        <li>Чтение</li>
+        <li>Занятия спортом</li>
+        <li>Изучение иностранных языков</li>
+        <li>Компьютерные игры</li>
+        <li>Пение</li>
+    </ol>
+    <hr>
+    <h3>Небольшой опросник...</h3>
+    <div>
+        <label for="hello">Давайте познакомимся.</label><br>
+        <input type="text" id="hello" placeholder="введите Ваше имя">
+        <button onclick="alert('Привет, '+getElementById('hello').value+'!')">Привет!</button>
+    </div>
+    <br>
+    <div>
+        <input type="email" name="" id="" placeholder="введите e-mail">
+        <button type="reset">Отправить</button>
+    </div>
+    <br>
+    <div>
+        Со всеми условиями согласны? ->
+        <input type="checkbox" name="" id="agree">
+        <label for="agree">Да</label>
+    </div>
+    <br>
+    <form>
+        Понравилась ли Вам анкетка? <br>
+        <input type="radio" name="yes" id="yes">
+        <label for="yes">Да</label>
+        <input type="radio" name="yes" id="ofcource">
+        <label for="ofcource">Очень</label>
+    </form>
+    <br>
+
+    <div>
+        <label for="bgclr">Выберите цвет фона:</label>
+        <select name="survey" id="bgclr">
+            <option value="white" onselect="this.parentNode.style.backgroundColor=this.value">Белый</option>
+            <option selected value="beige" onselect=document.body.style.backgroundColor='beige'>Бежевый</option>
+            <option value="green" onselect='document.body.style.backgroundColor=this.value'>Зелёный</option>
+            <option disabled value="black">Чёрный</option>
+        </select>
+    </div>
+
+</body>
+
+</html>
