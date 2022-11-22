@@ -37,7 +37,8 @@
     <div>
         <label for="hello">Давайте познакомимся.</label><br>
         <input type="text" id="hello" placeholder="введите Ваше имя">
-        <button onclick="alert('Привет, '+getElementById('hello').value+'!')">Привет!</button>
+        <button title="Текст приветствия будет ниже" onclick=" getElementById('hiyo').innerText=('Привет, '+getElementById('hello').value+'!')">Привет!</button>
+        <button title="Тескт в окне уведомления" onclick="alert('Привет, '+getElementById('hello').value+'!')">Привет!</button>
     </div>
     <br>
     <div>
