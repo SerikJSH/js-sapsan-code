@@ -13,15 +13,15 @@
 
 <body style="background-color: beige; font-family: Arial;">
     <h1>Serik Zhaxylykov</h1>
-    <img src="src/photo.jpg" alt="My photo!" height="200">
+    <img src="src/photo.jpg" title="Это я!" alt="My photo!" height="150">
     <hr>
     <h3>Мои навыки:</h3>
     <ul>
-        <li><b>Критическое</b> мышление</li>
-        <li><i>Социальный интеллект</i></li>
-        <li><u>Информационная грамотность</u></li>
-        <li>Цифровая грамотность</li>
-        <li>Гибкость, готовность меняться</li>
+        <li>Критическое мышление</li>
+        <li><b>Социальный</b> интеллект</li>
+        <li><i>Информационная</i> грамотность</li>
+        <li><u>Цифровая</u> грамотность</li>
+        <li><b><i>Гибкость, готовность меняться</i></b></li>
     </ul>
     <hr>
     <h3>Мои хобби:</h3>
@@ -34,24 +34,31 @@
     </ol>
     <hr>
     <h3>Небольшой опросник...</h3>
+
     <div>
         <label for="hello">Давайте познакомимся.</label><br>
         <input type="text" id="hello" placeholder="введите Ваше имя">
-        <button title="Текст приветствия будет ниже" onclick=" getElementById('hiyo').innerText=('Привет, '+getElementById('hello').value+'!')">Привет!</button>
-        <button title="Тескт в окне уведомления" onclick="alert('Привет, '+getElementById('hello').value+'!')">Привет!</button>
+        <button title="Текст приветствия будет ниже"
+            onclick="if (getElementById('hello').value!='') {getElementById('hiyo').innerText='Привет, '+getElementById('hello').value+'!'} else {getElementById('hiyo').innerText=('Привет, незнакомец!')}">Привет!</button>
+        <button title="Тескт в окне уведомления"
+            onclick="alert('Привет, '+getElementById('hello').value+'!')">Привет!</button>
+        <p id="hiyo"></p>
+    </div>
+
+    <div>
+        <label for="eml"><i>Подпишись на новости:</i></label><br>
+        <input type="email" id="eml" placeholder="введите e-mail">
+        <button type="submit">Отправить</button>
     </div>
     <br>
+
     <div>
-        <input type="email" name="" id="" placeholder="введите e-mail">
-        <button type="reset">Отправить</button>
-    </div>
-    <br>
-    <div>
-        Со всеми условиями согласны? ->
-        <input type="checkbox" name="" id="agree">
+        Со всеми условиями согласны? >
+        <input type="checkbox" id="agree">
         <label for="agree">Да</label>
     </div>
     <br>
+
     <form>
         Понравилась ли Вам анкетка? <br>
         <input type="radio" name="yes" id="yes">
@@ -63,12 +70,21 @@
 
     <div>
         <label for="bgclr">Выберите цвет фона:</label>
-        <select name="survey" id="bgclr">
-            <option value="white" onselect="this.parentNode.style.backgroundColor=this.value">Белый</option>
-            <option selected value="beige" onselect=document.body.style.backgroundColor='beige'>Бежевый</option>
-            <option value="green" onselect='document.body.style.backgroundColor=this.value'>Зелёный</option>
-            <option disabled value="black">Чёрный</option>
+        <select name="colorSelect" id="bgclr">
+            <option value="white" onselect="document.body.style.backgroundColor=this.value">Белый</option>
+            <option value="beige" onselect="document.body.style.backgroundColor='beige'" selected>Бежевый</option>
+            <option value="lightgreen" onselect="document.body.style.backgroundColor=this.value">Светлозелёный</option>
+            <option value="black" disabled>Чёрный</option>
         </select>
+        <button value="white"
+            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+            style="background-color: white">Белый фон</button>
+        <button value="lightgreen"
+            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+            style="background-color: lightgreen">Светлозелёный фон</button>
+        <button value="beige"
+            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+            style="background-color: beige">Бежевый фон</button>
     </div>
 
 </body>
