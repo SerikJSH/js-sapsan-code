@@ -1,0 +1,31 @@
+/* порядок стилей в файле css приоритетней */
+/* Приоритеты:
+1. Инлайновыt
+2. в теге <style>
+3. В файле *.css */
+
+
+.title_blue {
+    color: blue !important; /* повышенный приоритет */
+}
+.title {
+    color: red;
+    font-size: 48px;
+    text-align: center;
+}
+
+.cards-item {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+.cards-item_red {
+    background-color: red;
+}
+.cards-item_blue {
+    background-color: blue;
+}
+.cards-item:nth-child(2n) {
+    background-color: green;
+}
