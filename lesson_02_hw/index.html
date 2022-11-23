@@ -12,8 +12,8 @@
 </head>
 
 <body style="background-color: beige; font-family: Arial;">
-    <h1>Serik Zhaxylykov</h1>
-    <img src="src/photo.jpg" title="Это я!" alt="My photo!" height="150">
+    <h1>Серик</h1>
+    <img src="src/photo.jpg" title="Это я!" alt="My photo!" height="150" style="border-radius: 10px;">
     <hr>
     <h3>Мои навыки:</h3>
     <ul>
@@ -66,25 +66,28 @@
         <input type="radio" name="yes" id="ofcource">
         <label for="ofcource">Очень</label>
     </form>
-    <br>
+    <hr>
 
     <div>
         <label for="bgclr">Выберите цвет фона:</label>
-        <select name="colorSelect" id="bgclr">
-            <option value="white" onselect="document.body.style.backgroundColor=this.value">Белый</option>
-            <option value="beige" onselect="document.body.style.backgroundColor='beige'" selected>Бежевый</option>
-            <option value="lightgreen" onselect="document.body.style.backgroundColor=this.value">Светлозелёный</option>
+        <select name="colorSelect" id="bgclr" title="Выбор фона" onchange="body.style.backgroundColor=value">
+            <option value="white">Белый</option>
+            <option value="beige" selected>Бежевый</option>
+            <option value="lightgreen">Светлозелёный</option>
             <option value="black" disabled>Чёрный</option>
         </select>
         <button value="white"
-            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+            onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value"
             style="background-color: white">Белый фон</button>
         <button value="lightgreen"
-            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+            onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value"
             style="background-color: lightgreen">Светлозелёный фон</button>
-        <button value="beige"
-            onclick="document.body.style.backgroundColor=this.value; getElementById('bgclr').value=this.value"
+        <button value="beige" onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value"
             style="background-color: beige">Бежевый фон</button>
+    </div>
+    <div>
+        <label>Цвет фона с помощью кнопки выбора цвета:</label>
+        <input type="color" oninput="body.style.backgroundColor=value">
     </div>
 
 </body>
