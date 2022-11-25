@@ -1,0 +1,67 @@
+h3{
+    font-style: italic;
+}
+
+.my_photo{
+    border-top-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    border-color: blue;
+}
+
+.my_skills :hover{
+    color: red;
+    text-decoration: underline;
+    }
+
+.my_hobbies :hover{
+    color: blue;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    font-size: larger;
+}
+
+.btn_hi{
+    cursor: grabbing;
+    padding: 6px 20px;
+    background: src='/src/bachground.jpg';
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+.btn_hi :hover{
+    background-color: darkblue;
+    transition: 1s;
+}
+
+.btn_color{
+    color: black;
+    font-size: 12pt;
+    font-family: 'Courier New';
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid darkred;
+    display: inline;
+    border-radius: 12px;
+    background-color: blue;
+}
+.btn_color_white{
+    background-color: white;
+}
+.btn_color_lightgreen{
+    background-color: lightgreen;
+}
+.btn_color_beige{
+    background-color: beige;
+}
+
+.btn_color :hover{
+    background-color: red;
+    font-size: 120%;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+.select_ch{
+    font-size: medium;
+    box-shadow: 0px -5px 20px 2px red;
+    position: relative;
+    font-family: Arial;
+}
