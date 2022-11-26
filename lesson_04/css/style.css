@@ -1,0 +1,56 @@
+body{
+    background-color: aquamarine;
+}
+
+.cards-item{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100px;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: aqua;
+}
+/* .cards-item:first-child{
+    background-color: red;
+}
+.cards-item:nth-child(2){
+    background-color: yellow;
+}
+.cards-item:nth-child(3){
+    background-color: blue;
+}
+.cards-item:last-child{
+    background-color: green;
+} */
+
+.cards-item:nth-child(even){
+    background-color: beige;
+}
+.cards-item:nth-child(odd){
+    background-color: black;
+}
+.span{
+    display: block;
+}
+
+p{
+    font-size: 40px;
+    letter-spacing: 30px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    /* text-align: center; */
+    font-weight: 800;
+    text-indent: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1669046222569-a7672da06e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
