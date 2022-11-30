@@ -23,7 +23,7 @@ h3{
 .btn_hi{
     cursor: grabbing;
     padding: 6px 20px;
-    background: src='/src/bachground.jpg';
+    background: src='../src/bachground.jpg';
     box-shadow: 5px 5px 10px 2px gray;
 }
 

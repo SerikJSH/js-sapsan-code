@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 Homework - My CV</title>
+    <link rel="shortcut icon"
+        href="./src/Google-Noto-Emoji-People-Profession-10303-man-office-worker-light-skin-tone.ico"
+        type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="backgr">
+        <div class="main">
+            <h1 class="my_name">Серик Жаксылыков</h1><br>
+            <img class="my_photo" src="src/photo.jpg" title="Это я!" alt="My photo!">
+            <hr>
+            <h3>Мои навыки:</h3>
+            <ul class="my_skills">
+                <li>Критическое мышление</li>
+                <li><b>Социальный</b> интеллект</li>
+                <li><i>Информационная</i> грамотность</li>
+                <li><u>Цифровая</u> грамотность</li>
+                <li><b><i>Гибкость, готовность меняться</i></b></li>
+            </ul>
+            <hr>
+            <h3>Мои хобби:</h3>
+            <ol class="my_hobbies">
+                <li>Чтение</li>
+                <li>Занятия спортом</li>
+                <li>Изучение иностранных языков</li>
+                <li>Компьютерные игры</li>
+                <li>Пение</li>
+            </ol>
+            <hr>
+            <h3>Небольшой опросник...</h3>
+    
+            <form>
+                <div>
+                    <label for="hello">Давайте познакомимся.</label><br>
+                    <input type="text" id="hello" placeholder="введите Ваше имя">
+                    <button class="btn_hi" title="Текст приветствия будет ниже" type="button"
+                        onclick="if (getElementById('hello').value!='') {getElementById('hiyo').innerText='Привет, '+getElementById('hello').value+'!'} else {getElementById('hiyo').innerText=('Привет, незнакомец!')}">
+                        Привет!</button>
+                    <button class="btn_hi" title="Тескт в окне уведомления" type="button"
+                        onclick="alert('Привет, '+getElementById('hello').value+'!')"> Привет!</button>
+                    <p id="hiyo"></p>
+                </div>
+            </form>
+    
+            <form>
+                <div>
+                    <label for="eml"><i>Подпишись на новости:</i><br>
+                        <input type="email" id="eml" placeholder="введите e-mail" required>
+                        <input type="submit"></input>
+                    </label>
+                </div>
+            </form>
+            <br>
+    
+            <div>
+                Со всеми условиями согласны?
+                <label for="agree">
+                    <input type="checkbox" id="agree">
+                    Да</label>
+            </div>
+            <br>
+    
+            <form>
+                <fieldset>
+                    <legend>Понравилась ли Вам анкетка?</legend>
+                    <label for="yes">
+                        <input type="radio" name="yes" id="yes">
+                        Да</label>
+                    <label for="ofcource">
+                        <input type="radio" name="yes" id="ofcource">
+                        Очень</label>
+                </fieldset>
+            </form>
+    
+            <hr>
+            <div>
+                <label for="bgclr">Выберите цвет фона из списка:</label>
+                <select class="select_ch" name="colorSelect" id="bgclr" title="Выбор фона"
+                    onchange="body.style.backgroundColor=value">
+                    <option value="white">Белый</option>
+                    <option value="beige" selected>Бежевый</option>
+                    <option value="lightgreen">Светлозелёный</option>
+                    <option value="black" disabled>Чёрный</option>
+                </select>
+                <br><br>
+                С помощью кнопок:
+                <button class="btn_color btn_color_white" value="white"
+                    onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value">Белый</button>
+                <button class="btn_color btn_color_lightgreen" value="lightgreen"
+                    onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value">Светлозелёный</button>
+                <button class="btn_color btn_color_blue" value="blue"
+                    onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value">Синий</button>
+                <button class="btn_color btn_color_beige" value="beige"
+                    onclick="body.style.backgroundColor=value; getElementById('bgclr').value=value">Бежевый</button>
+                <br><br>
+                <label>Либо с помощью кнопки выбора цвета:
+                    <input type="color" oninput="body.style.backgroundColor=value">
+                </label>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
