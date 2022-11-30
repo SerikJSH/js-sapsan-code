@@ -1,0 +1,21 @@
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 10%;
+}
+.box-clr1:nth-child(3n){
+    background-color: red;
+}
+.box-clr2:nth-child(3n+4){
+    background-color: green;
+}
+/* .box-clr2:nth-child(3n+1):not(:first-child){
+    background-color: green;
+} */

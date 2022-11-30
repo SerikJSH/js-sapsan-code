@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Black.eot');
+    src: url('../fonts/Poppins/Poppins-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins/Poppins-Black.woff2') format('woff2'),
+        url('../fonts/Poppins/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Thin.eot');
+    src: url('../fonts/Poppins/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins/Poppins-Thin.woff2') format('woff2'),
+        url('../fonts/Poppins/Poppins-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Poppins', 'Rubik Microbe', cursive;
+}
+
+.text2{
+    font-weight: 900;
+}
+.box5{
+    /* height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 30%;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 40px; */
+    margin: 10px 20px 30px 20px;
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+    border: 2px solid red;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.box5-blue{
+    color: white;
+    border: 2px dashed yellow;
+    background-color: blue;
+    margin-top: 100px;
+    padding: 30px 50px;
+}
+
+.cards{
+    display: flex;
+    column-gap: 20px;
+}
+.cards-left{
+    position: sticky;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    border: 2px solid red;
+    background-color: aqua;
+}
+.cards-right{
+    width: 300px;
+    height: 800px;
+    border: 2px solid blue;
+    background-color: aquamarine;
+
+}
