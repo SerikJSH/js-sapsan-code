@@ -1,0 +1,155 @@
+body{
+    background-color: beige;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 850px;
+    max-width: 900px;
+}
+h3{
+    font-style: italic;
+}
+.backgr{
+    background-image: url(../src/background.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    /* background-size: 90%; */
+    background-position: left;
+    display: flex;
+    gap: 10px;
+    border: 2px dotted red;
+}
+.main{
+    width: 30%;
+    height: 400px;
+    position: sticky;
+    top: 10px;
+    padding-top: 5pt;
+    margin-left: 20%;
+    /* margin-right: 20%; */
+    /* min-width: 650px;
+    max-width: 700px; */
+    border: 2px dotted red;
+}
+.info{
+    width: 60%;
+    border: 2px dotted red;
+}
+.my_name{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: darkblue;
+    background-image: linear-gradient(
+        90deg,
+    darkblue 0%,
+    darkviolet 30%,
+    red 75%,
+    gold 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s alternate-reverse infinite;
+    display: inline-block;
+}
+@keyframes textclip {
+    to {
+      background-position: -150% center;
+    }
+  }
+
+.my_photo{
+    height: 150px;
+    border-top-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    border-style: ridge;
+    border-color: green;
+    border-width: 3px;
+    box-shadow: 5px 5px 10px 2px;
+}
+.my_photo:hover{
+    box-shadow: 5px 5px 50px 4px;
+    border-style: ridge;
+    border-color: gold;
+    border-width: 3px;
+    transition: 0.75s;
+}
+
+.my_skills :hover{
+    color: red;
+    text-decoration: underline;
+    }
+
+.my_hobbies :hover{
+    color: blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: larger;
+    transition: 0.5s;
+}
+
+.btn_hi{
+    display: inline-block;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    background-repeat: no-repeat; background-position: left 0 center;
+    background-size: 20px 20px;
+    background-image: url(../src/Notes.ico);
+    cursor: grab;
+    padding: 6px 20px;
+    box-shadow: 0 7px gray;
+}
+.btn_hi :hover{
+    background-color: darkblue;
+}
+.btn_hi :active {
+    background-color: darkblue;
+    box-shadow: 0 4px gray;
+    transform: translateY(4px);
+  }
+
+.btn_color{
+    color: black;
+    font-size: 12pt;
+    font-family: 'Courier New';
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid darkred;
+    display: inline;
+    border-radius: 12px;
+    background-color: blue;
+}
+.btn_color_white{
+    background-color: white;
+}
+.btn_color_lightgreen{
+    background-color: lightgreen;
+}
+.btn_color_blue{
+    background-color: blue;
+    color: white;
+}
+.btn_color_beige{
+    background-color: beige;
+}
+
+.btn_color :hover{
+    background-color: red;
+    font-size: 120%;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+.select_ch{
+    font-size: medium;
+    box-shadow: 0px -5px 20px 2px greenyellow;
+    /* position: relative; */
+    font-family: Arial;
+}
