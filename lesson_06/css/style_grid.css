@@ -1,0 +1,29 @@
+.cards{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.box{
+    text-align: top;
+    border:  1px solid blue;
+}.box > h3{
+    margin: 0;
+    font-size: 12px;
+}
+.box > p{
+    font-size: 10px;
+}
+.box:last-child{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.box:nth-child(1){
+    grid-row-start: 2;
+    /* grid-row-end: 2; */
+    grid-column-start: 3;
+    /* grid-column-end: 3; */
+}

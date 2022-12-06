@@ -1,0 +1,43 @@
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
+}
+
+@media screen and (min-width: 768px) {
+    .box {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+   .cards {
+        display: block;
+   }
+}
+
+@media screen and (max-width: 425px){
+   .menu {
+        display: none;
+   }
+   .burger-menu {
+        display: block;
+   }
+}
+@media screen and (min-width: 426px){
+   .menu {
+        display: block;
+   }
+   .burger-menu {
+        display: none;
+   }
+}
