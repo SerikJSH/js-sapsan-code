@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: green;
+}
+
+p {
+  color: green;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+.box > span {
+  color: green;
+}
+.box p {
+  color: green;
+}
+.box span {
+  color: green;
+}
+.box::last-child {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

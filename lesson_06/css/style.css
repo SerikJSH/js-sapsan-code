@@ -1,0 +1,94 @@
+*{ /* '*' селектор всего */
+    margin: 0;
+}
+
+p{ /* '#' -обращение по тегу */
+    font-style: italic;
+}
+
+#card-id{ /* '#' -обращение по id */
+    background-color: red;
+}
+
+.card{/* '.' -обращение по классу */
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+.box span{ /* ' ' -обращение к тегу в классе */
+    color: red;
+}
+.box div > span > b{ /* '>' -обращение к вложенным тегу в классе */
+    color: blue;
+}
+
+.list li{
+    border: 1px dashed red;
+}
+.list > li{
+    font-style: italic;
+    color: green;
+    background-color: beige;
+    margin-top: 20px;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+p ~ span{ /* '~' -обращение к элементам после тега' */
+    color: chartreuse;
+}
+.text + div{ /* '+' -обращение к одному элементу после тега' */
+    color: blue;
+}
+
+/* псевдо классы после ":" */
+a:link{
+    color: blue;
+}
+a:visited{
+    color: gray;
+}
+a:hover{
+    color: chartreuse;
+}
+a:active{
+    color: brown;
+}
+
+.cadr{
+    position: relative; /* для позиционирования дочерних элементов*/
+    width: 200px;
+    height: 200px;
+    border: 2px solid blueviolet;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: beige;
+    border: 2px solid royalblue;
+    position: absolute; /* позиция элемента поверх остальных */
+    right: 10px;
+    top: 10px;
+    z-index: 2; /* приоритетность расположения слоя, работает с 'position: absolute' */
+}
+.box-2{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 2px solid royalblue;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+}
+.box-3{
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border: 2px solid royalblue;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 3;
+}

@@ -1,0 +1,30 @@
+// $clr: green; /* - переменная */
+
+@import 'reset';
+@import 'vars';
+
+body {
+    background-color: $clr;
+}
+
+p {
+    color: $clr;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: $clr2;
+    > span {
+        color: $clr;
+    }    
+    p {
+        color: $clr;
+    }
+    span {
+        color: $clr;
+    }
+    &::last-child {
+        background-color: $clr;
+    }
+}
