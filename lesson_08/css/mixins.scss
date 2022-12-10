@@ -1,0 +1,13 @@
+@mixin card ($height, $width, $bg-color) {
+    height: $height;
+    width: $width;
+    background-color: $bg-color;
+}
+
+%message {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: bold;
+    //font-size: 40px;
+}

@@ -1,0 +1,48 @@
+.warning, .error, .success {
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+html {
+  font-size: 30px;
+}
+
+body {
+  background-color: beige;
+}
+
+.list li a {
+  color: beige;
+}
+
+.box-1 {
+  height: 100px;
+  width: 150px;
+  background-color: green;
+}
+
+.box-2 {
+  height: 100px;
+  width: 175px;
+  background-color: blue;
+}
+
+.text {
+  font-size: 40px;
+}
+
+.success {
+  background-color: green;
+  font-size: 2rem;
+}
+
+.error {
+  background-color: red;
+  font-size: 2em;
+}
+
+.warning {
+  background-color: orange;
+}/*# sourceMappingURL=style.css.map */

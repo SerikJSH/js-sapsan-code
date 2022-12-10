@@ -1,0 +1,51 @@
+@import 'vars';
+@import 'mixins';
+
+html {
+    font-size: 30px;
+}
+body {
+    background-color: $bg-clr;
+}
+
+// вложенность
+.list {
+    li {
+        a {
+            color: $bg-clr;
+        }
+    }
+}
+
+.box-1 {
+    @include card(100px, 150px, green);
+    // width: 100px;
+    // background-color: red;
+}
+
+.box-2 {
+    @include card(100px, 175px, blue);
+}
+
+.text {
+    font-size: 40px
+}
+
+.success {
+    @extend %message;
+    background-color: green;
+    font-size: 2rem; // rem - опирается на базовый родительский элемент (<html>)
+}
+.error {
+    @extend %message;
+    background-color: red;
+    font-size: 2em; // em - опирается на ближайший стиль родительского элемента (<text>)
+}
+.warning {
+    @extend %message;
+    background-color: orange;
+}
+
+@media screen and (width: 767px) {
+    
+}
