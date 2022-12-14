@@ -1,0 +1,25 @@
+@mixin card ($height, $width, $bg-color) {
+    height: $height;
+    width: $width;
+    background-color: $bg-color;
+}
+
+%message {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: bold;
+    //font-size: 40px;
+}
+
+%btns {
+    color: black;
+    font-size: 12pt;
+    font-family: 'Courier New';
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid darkred;
+    display: inline;
+    border-radius: 12px;
+    background-color: blue;
+}

@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat/Caveat-Regular.eot");
+  src: url("../fonts/Caveat/Caveat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Caveat/Caveat-Regular.woff2") format("woff2"), url("../fonts/Caveat/Caveat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("../fonts/El_Messiri/ElMessiri-Regular.eot");
+  src: url("../fonts/El_Messiri/ElMessiri-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/El_Messiri/ElMessiri-Regular.woff2") format("woff2"), url("../fonts/El_Messiri/ElMessiri-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: beige;
+  background-image: url(../src/bg.webp);
+}
+
+h1 {
+  margin: 20px;
+  padding: 20px;
+  min-width: 1050px;
+  background-image: url(../src/pexels-fwstudio-129731.jpg);
+  box-shadow: 5px 5px 2px black;
+}
+
+h3 {
+  margin: 0;
+}
+
+nav {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  background-image: url(../src/menu.webp);
+  box-shadow: 2px 3px 2px black;
+}
+
+#main-grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 250px auto;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.menu-name {
+  background-color: cadetblue;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-text-decoration-line: overline;
+          text-decoration-line: overline;
+  box-shadow: 2px 3px 2px black;
+}
+
+.menu {
+  display: grid;
+  grid-template: 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  list-style-type: circle;
+}
+
+.menu li {
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  background-color: cadetblue;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition-property: all;
+  box-shadow: 2px 3px 2px black;
+}
+
+.menu li:hover {
+  background-color: blanchedalmond;
+  -webkit-animation: forwards;
+          animation: forwards;
+  color: darkblue;
+  transition-duration: 1.7s;
+}
+
+#l-grid {
+  height: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+#r-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  position: relative;
+}
+
+#r-box:nth-child(2n-1) {
+  background-color: lightsalmon;
+}
+
+#r-box {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+#r-box a {
+  font-family: "El Messiri";
+}
+
+#box-img {
+  border-radius: 10px;
+}
+
+#box-cat {
+  font-family: Caveat;
+  padding-bottom: 10px;
+}
+
+#box-descr {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+#r-box:hover {
+  box-shadow: 2px 3px 2px black;
+  transition: ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  #r-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}/*# sourceMappingURL=style.css.map */
