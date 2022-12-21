@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10 - Introduction to JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // let - тип объявления переменной, которую можно в дальнейшем изменить
+        // const - тип объявления переменной, которую нельзя в дальнейшем изменить
+        // 'use strict' - дирекива строгости 
+
+        // let fruit = "Яблоко";
+        // const fruit = "Яблоко";
+        // let count = 42;
+        // let isFruit = false;
+
+        // fruit = "Груша";
+        // fruit = "Виноград";
+
+        // const name = "Serik";
+        // const age = 41;
+        // const person = {
+        //     name: "Serik",
+        //     age: 41
+        // }
+        // person.city = "Astana";
+
+        // alert(fruit);
+        // alert(person);
+
+
+        //Области видимости: глобальная, функциональная, блочная
+
+        // let a = "Hello"; // -глобальная видимость, т.е. переменная видна отовсюду
+
+        // {
+        //     let b = "Hello!!"; // - блочная область видимости, т.е. переменная видна только внутри блока
+        // }
+
+        // {
+        //     var c = "CCCCccc"; // - блочная область видимость, но 'var' позволяет видеть всем переменную внутри блока. Устаревшее объявление переменной, лучше не использовать
+        // }
+
+        // for (let i = 0; i++; 10);
+
+        // function test () {
+        //     // alert(c);   // функциональная область видимости
+        // }
+
+        // test();
+
+        // let name = "Akmaral";
+        // console.log("Hello,",name,"How are you?");
+        // console.log("ggggggggg");
+        // console.error("ОШИБКА!");
+        // console.warn("ВНИМАНИЕ!");
+        // alert('Привет, ' + name + '! Как дела?'); // конкантинация - соединение частей через знак '+'
+
+        const a = 12;
+        const b = 5;
+
+        console.log('a =', a, 'b =', b); // сложение
+        console.log('a + b =', a + b); // сложение
+        console.log('a - b =', a - b); // вычитание
+        console.log('a * b =', a * b); // умножение
+        console.log('a / b =', a / b); // деление
+        console.log('a ^ b =', a ** b); // возведение
+        console.log('a mod b =', a % b); // остаток от деления
+
+        // let answer = prompt("What is your name?") // для получения данных от пользователя (как и 'alert' команда браузера)
+        // console.log(answer);
+        // answer = prompt("What is your name again?");
+        // console.log(answer);
+
+    </script>
+</body>
+
+</html>
