@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Самоделкин! - Lesson 9 Homework - Bootstrap</title>
+</head>
+
+<body class="bg-light">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand navbar-dark bg-danger">
+            <div class="container-fluid mb-0 h1">
+                <a class="navbar-brand" href="#"><img src="src/ft-logo.png" alt="Logo" width="30"
+                        height="24">Самоделкин! - сайт для мастеров</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item btn btn-primary">
+                            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item dropdown btn btn-success">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Рубрики</a>
+                            <ul class="dropdown-menu bg-success">
+                                <li><a class="dropdown-item" href="#">Кулинария</a></li>
+                                <li><a class="dropdown-item" href="#">Электроника</a></li>
+                                <li><a class="dropdown-item" href="#">Авто самоделки</a></li>
+                                <li><a class="dropdown-item" href="#">Строительство и ремонт</a></li>
+                                <li><a class="dropdown-item" href="#">Сад и огород</a></li>
+                                <li><a class="dropdown-item" href="#">Полезное и интересное</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">О нас...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item btn btn-dark">
+                            <a class="nav-link active" href="#">Контакты</a>
+                        </li>
+                        <li class="nav-item btn btn-link">
+                            <a class="nav-link disabled">Скоро...</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col bg-secondary p-3">
+                    GridEl1
+                </div>
+                <div class="col bg-info p-3">
+                    GridEl2
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container" id="main-grid">
+            <div class="row">
+                <div class="col-2 list-group" id="l-grid">
+                    <span class="list-group-item bg-info">Рубрики сайта:</span>
+                    <a href="#" class="list-group-item list-group-item-action">Кулинария</a>
+                    <a href="#" class="list-group-item list-group-item-action">Авто самоделки</a>
+                    <a href="#" class="list-group-item list-group-item-action">Электроника</a>
+                    <a href="#" class="list-group-item list-group-item-action">Строительство и ремонт</a>
+                    <a href="#" class="list-group-item list-group-item-action">Сад и огород</a>
+                    <a href="#" class="list-group-item list-group-item-action">Полезное и интересное</a>
+                </div>
+                <div class="col bg-success container" style="--bs-columns: 4; --bs-gap: 5rem;" id="r-grid">
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6 col-xl-4 bg-warning " id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/vkusnejshie-kartofelnye-chipsy-bez-masla-i-zharki.jpg"
+                                        id="box-img" alt="картинка домашних чипсов"></a>
+                                <h3><a href="" class="card-link fs-5">Вкуснейшие картофельные чипсы БЕЗ масла и
+                                        жарки</a></h3>
+                                <div class="card-subtitle m-2 id=" box-cat">Кулинария</div>
+                                <div class="card-text" id="box-descr">Хрустящие чипсы давно вошли в жизнь любителей
+                                    быстро
+                                    перекусить или просто порадовать себя необычными вкусами. Но не всегда мы знаем, что
+                                    конкретно входит в состав той или иной продукции. Предлагаем вам самостоятельно
+                                    приготовить
+                                    домашние</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/kak-sdelat-moschnuju-dym-mashinu-45-kvt-0-00-15-093.jpg"
+                                        id="box-img" alt="картинка дым машины"></a>
+                                <h3><a href="" class="fs-5">Как сделать мощную дым-машину 4,5 кВт</a></h3>
+                                <div id="box-cat">Электроника</div>
+                                <div id="box-descr">Все видели маленькие дымовые машины в танцевальных клубах, барах и
+                                    дискотеках.
+                                    Они действительно испускают приятные клубы дыма, но производительность их невелика –
+                                    едва
+                                    хватает для небольшого зала. Мы будем делать дымового монстра мощностью 4,5 кВт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/kak-sdelat-prostoj-kukuruznyj-shelushitel-0-00-21-800.jpg"
+                                        id="box-img" alt="картинка кукурузного шелушителя"></a>
+                                <h3><a href="" class="fs-5">Как сделать простой кукурузный шелушитель</a></h3>
+                                <div id="box-cat">Полезное и интересное</div>
+                                <div id="box-descr">Шелушение кукурузных початков просто руками не очень
+                                    производительное
+                                    занятие, отнимающее много сил. Сделав довольно простой по конструкции кукурузный
+                                    шелушитель,
+                                    эту работу можно значительно ускорить и при этом совершенно не утомиться.</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/sekrety-zimnego-hranenija-urozhaja.jpg" id="box-img"
+                                        alt="картинка хранения урожая]"></a>
+                                <h3><a href="" class="fs-5">Секреты зимнего хранения урожая</a></h3>
+                                <div id="box-cat">Сад и огород</div>
+                                <div id="box-descr">Этот мастер-класс начинается в подвале. В подполе. И посвящен он
+                                    зимнему
+                                    хранению овощей: моркови, свёклы, капусты. Делимся опытом, передаём его другим.
+                                    Подвал и
+                                    погреб
+                                    – это совершенно разные вещи. Подвал – это такое техническое сооружение, в</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/bez-gribov-obaldennoe-bljudo-iz-obychnogo-kartofelja.jpg"
+                                        id="box-img" alt="картинка обалденного блюда из картофеля))"></a>
+                                <h3><a href="" class="fs-5">Без грибов! Обалденное блюдо из обычного картофеля</a></h3>
+                                <div id="box-cat">Кулинария</div>
+                                <div id="box-descr">Картофель подают в разном виде – жареным, вареным, тушеным, в
+                                    качестве
+                                    пюре
+                                    и
+                                    т.д. Но хочется предложить вам попробовать еще одно необычное блюдо. В виде грибов,
+                                    но
+                                    со
+                                    вкусом
+                                    картошки. Практически невозможно догадаться внешне, из чего оно</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/kak-idealno-obojti-trubu-kovrolinom-ili-linoleumom.jpg"
+                                        id="box-img" alt="картинка трубы и ковролана и линоеума))"></a>
+                                <h3><a href="" class="fs-5">Как идеально обойти трубу ковролином или линолеумом</a></h3>
+                                <div id="box-cat">Строительство и ремонт</div>
+                                <div id="box-descr">И зачем только мы изучали геометрию в школе? Ведь в жизни она нам
+                                    никогда не
+                                    пригодится! Ошибаетесь! Ещё как пригодится. А где? Ответ на это даёт ролик из
+                                    Интернета,
+                                    который
+                                    мы и рассмотрим поподробнее. Речь пойдёт о подрезке напольных покрытий:</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img
+                                        src="src/8-poleznyh-lajfhakov-po-primeneniju-kabelnyh-stjazhek-v-domashnem-hozjajstve.jpg"
+                                        id="box-img" alt="картинка применения кабельных стяжек в быту"></a>
+                                <h3><a href="" class="fs-5">8 полезных лайфхаков по применению кабельных стяжек в
+                                        домашнем хозяйстве</a>
+                                </h3>
+                                <div id="box-cat">Полезное и интересное</div>
+                                <div id="box-descr">Кабельные стяжки (пластиковые хомуты или стрипы) сегодня широко
+                                    распространены
+                                    из-за своей надежности, прочности и стойкости. Обычно это изделия одноразового
+                                    применения и
+                                    стоят недорого. Поэтому на них мало обращают внимания.</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/kak-prigotovit-svinuju-grudinku-po-receptu-iz-restorana.jpg"
+                                        id="box-img" alt="картинка вкусняшки)"></a>
+                                <h3><a href="" class="fs-5">Как приготовить свиную грудинку по рецепту из ресторана</a>
+                                </h3>
+                                <div id="box-cat">Кулинария</div>
+                                <div id="box-descr">Приготовить свиную грудинку не так-то просто. С одной стороны, она
+                                    достаточно
+                                    жирная и не подходит для самостоятельного блюда. С другой стороны, если готовить ее
+                                    неправильно,
+                                    она может стать сухой и жесткой. Предлагаю вам один из самых любимых мной</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-12 col-lg-6 col-xl-4" id="r-box">
+                            <div class="card-body">
+                                <a href=""><img src="src/kak-sdelat-rukojat-dlja-nozha-iz-probok.jpg" id="box-img"
+                                        alt="картинка рукояти ножа из пробок"></a>
+                                <h3><a href="" class="fs-5">Как сделать рукоять ножа из пробоки</a></h3>
+                                <div id="box-cat">Полезное и интересное</div>
+                                <div id="box-descr">Не надо объяснять, насколько важен на кухне острый нож с удобной и
+                                    нескользкой
+                                    рукоятью. Также такой нож незаменим в походе, на рыбалке или охоте. Сделать такую
+                                    рукоять
+                                    для
+                                    ножа, топорика, спиннинга или зимней удочки можно из пробок из-под</div>
+                            </div>
+                        </div>
+                        <div id="r-box"></div>
+                        <div id="r-box"></div>
+                        <div id="r-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
