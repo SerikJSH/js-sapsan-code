@@ -15,17 +15,18 @@
             const height = prompt('Укажи рост, брат.');
             const waist = prompt('Укажи окружность своей мужской талии.');
             result = 64 - 20 * height / waist;
-            alert('Жира в твоем мужском теле ' + result.toFixed(1) + '%');
+            console.log(result)
+            alert('Жира в твоем мужском теле ' + (Math.round(result * 100)) / 100 + '%');
         } else if ((gender.toLowerCase() == 'ж') || (gender.toLowerCase() == 'f')) {
             const height = prompt('Укажите Ваш рост, прекрасная леди.');
             const waist = prompt('Укажите окружность Вашей осиной талии.');
             result = 76 - 20 * height / waist;
-            alert('Жира в Вашем прекрасном теле ' + result.toFixed(1) + '%');
+            console.log(result)
+            alert('Жира в Вашем прекрасном теле ' + (Math.round(result * 100)) / 100 + '%');
         } else {
             alert("К сожалению, мы не умеем рассчитывать долю жира в телах представителей других полов...");
         }
 
-        console.log(result)
     </script>
 </body>
 
