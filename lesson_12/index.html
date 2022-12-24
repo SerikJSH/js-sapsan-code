@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11 - JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // let nums = prompt('Input two numbers (with the space between):');
+        // sum = nums.split(" "); // str.split("i") - преобразование строки str в массив, i - разделитель
+        // Number(str) - преобразование строки str в число, либо +str
+        // const a = Number(prompt('Input the first number:'));
+        // const b = Number(prompt('Input the second number:'));
+        // alert('Summ of the numbers is ' + (a + b));
+
+        // console.log('Summ of the numbers is', (+sum[0] + +sum[1]));
+        // alert('Summ of the numbers is ' + (+sum[0] + +sum[1]));
+
+        // console.log('Summ of the numbers is', (sum[0] * sum[1]));
+        // alert('Summ of the numbers is ' + (sum[0] * sum[1]));
+
+        // let a = +prompt("Input a:");
+        // let b = +prompt("Input b:");
+        // if (Number(a) > 10) {
+        //     alert("10!")
+        // } else if (a == 5) {
+        //     alert(a)
+        // } else {
+        //     console.log("sdfsdfsdf")
+        // }
+        // операторы: == - нестрогое сравнение; === - строгое сравнение; || - OR; && - AND; != (!== строгое) - NOT
+        // if (a == 10 || b == 2) {
+        //     alert("10!");
+        // }
+        'use strict'
+        // const x = prompt('Input number x:');
+        // const y = prompt('Input number y:');
+        // const z = prompt('Input even number z:');
+        // let exp;
+
+        // if (z % 2 == 0) {
+        //     exp = x * x  + +y - z / 2
+        // } else {
+        //     alert('Try again, please input even number z ');
+        // }
+        //     console.log(exp);
+        //     alert(exp);
+
+        // const xy = prompt('Input numbers x and y:');
+        // let arr = xy.split(" ");
+        // if (Number(arr[0]) > Number(arr[1]) && Number(arr[0]) % Number(arr[1]) == 0) {
+        //     alert('Yes');
+        // } else {
+        //     alert('No');
+        // }
+        
+        const xy = prompt('Input numbers x and y:');
+        let arr = xy.split(" ");
+        if (Number(arr[0]) > Number(arr[1])) {
+            alert('>');
+        } else if (Number(arr[0]) < Number(arr[1])) {
+            alert('<');
+        } else {
+            alert('=');
+        }
+        
+
+    </script>
+</body>
+
+</html>
