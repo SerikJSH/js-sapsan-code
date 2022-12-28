@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13 - Cycles</title>
+</head>
+<body>
+    <script>
+        // let number = 0;
+        // while (number < 10) {
+        //     console.log("Number", number);
+        //     number++; // аналогия "number = number + 1"
+        //     //number--; number += n - увеличить на n
+        // }
+        
+        const arr = ['1000', '500', '100', '2000', '50', '4000'];
+        // console.log(arr.length);
+        // console.log(arr[0]);
+        // console.log(arr[1]);
+        
+        // Цикл "while"
+       
+        // let i = 0;
+        // let sum = 0;
+        // while (i < arr.length) {
+        //     sum = sum + +arr[i];
+        //     console.log('arr['+ i + '] = ' + arr[i]);
+        //     i++;
+        // }
+        // console.log('Summ of Array`s elements is', sum);
+
+        // let j = arr.length - 1;
+        // let sum2 = 0;
+        // while (j >= 0) {
+        //     sum2 = sum2 + +arr[j];
+        //     console.log('arr['+ j + '] = ' + arr[j]);
+        //     j--;
+        // }
+        // console.log('Summ of Array`s elements is', sum2);
+        
+        // while (num < 10) {
+        //     console.log('arr['+ j + '] = ' + arr[j]);
+        // }
+
+        // Цикл "do while" сначала выполняет действие, а потом проверяет условие.
+
+        // let num = 7;
+        // do {
+        //     console.log("Number is", num);
+        // } while (num < 2);
+
+        // Цикл for
+        // let i = 2; // начало можно вынести перед for, условие можно вынести в действие for
+        // for (; i < 10; i++) {
+        //     console.log(i);
+        // }
+        // console.log("i =",i);
+
+        // Задание 1. Прямая последовательность
+        let i1 = 1;
+        let str1 = "";
+        while (i1 <= 5) {
+            // console.log(i);
+            str1 += ' ' + i1;
+            i1++
+        }
+        for (let j1 = 1; j1 < 6; j1++) {
+            // console.log(j1);
+            str1 += ' ' + j1;
+        }
+
+        // Задание 2. Обратная последовательность
+        let i2 = 1;
+        let str2 = '';
+        while (i2 <= 5) {
+            // console.log(6 - i2);
+            i2++
+        }
+        for (let j2 = 1; j2 < 6; j2++) {
+            str2 += ' ' + (6 - j2);
+            // console.log(6 - j2);
+        }
+        // console.log(str2);
+
+        // Задание 3. Таблица умножения на 3
+        let i3 = 1;
+        while (i3 < 10) {
+            console.log('3 x ' + i3 + ' = ' + 3 * i3);
+            i3++;
+        }
+
+
+        // let sum = 0;
+        // while (true) {
+        //     const answer = +prompt("Input the number:");
+        //     if (!answer) break;
+        //     sum += answer;
+        // }
+        // console.log("Summ is", sum);
+
+        // let number = 2;
+        // while (number < 10) {
+        //     if (number == 5) break;
+        //     console.log("Number is", number);
+        //     number++;
+        // }
+
+    </script>
+</body>
+</html>
