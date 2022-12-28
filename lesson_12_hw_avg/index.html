@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Homework - Average of numbers</title>
+</head>
+<body>
+    <script>
+        const nums = prompt('Input some numbers to calculate their average (with space between):');
+        const arr = nums.split(" ");
+        let sum = 0;
+        for (i = 0; i < arr.length; i++) {
+            sum = sum + +arr[i];
+        }
+        avg = sum / arr.length;
+        console.log(avg);
+        alert('The average of numbers you entered is ' + avg);
+    </script>
+</body>
+</html>

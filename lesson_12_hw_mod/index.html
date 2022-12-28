@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Homework - The remainder of division</title>
+</head>
+<body>
+    <script>
+        const nums = prompt('Input two numbers to calculate remainder (with space between):');
+        const arr = nums.split(" ");
+        if (arr[1] == 0) {
+            alert("Sorry, but second number must be different of zero!");
+        } else {
+            var mod = arr[0] % arr[1];
+            console.log(mod);
+            alert('The remainder from the division of the first number by the second one is ' + mod);
+        }
+    </script>
+</body>
+</html>
