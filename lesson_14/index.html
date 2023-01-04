@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13 - Arrays</title>
+</head>
+<body>
+    <script>
+        // let fruit = ["Apple","Orange","Plum"];
+        // console.log(fruit[0]);
+        // console.log(fruit.length);
+        
+        // Пример 1
+        // const arr = []; // массивы и объекты объявляются через const, чтобы не изменился тип объекта (например, массив не стал строкой или числом)
+        // let i = 0;
+        // let sum = 0;
+        // while(true){
+        //     let num = +prompt("Input any number:");
+        //     if (num == '') break;
+        //     arr.push(num);
+        //     sum += arr[i];
+        //     i++;
+        // }
+        // console.log("The array is", arr);
+        // console.log("Summ of array elements is",sum);
+
+        // Пример 2. Запрос длинны массива и значения элемента (будет скопирован во все элементы массива)
+        // const l = +prompt('Input lenth of the first array');
+        // const v = prompt('Input value of the element of array to copy it');
+        // const arr2 = [];
+        // let c = 1;
+        // while (c <= l) {
+        //     arr2.push(v);
+        //     c++;
+        // }
+        // console.log(arr2);
+        // // Пример 2.1. Запрос длинны массива и всех значений элементов массива
+        // const l3 = +prompt('Input lenth of the second array');
+        // const arr3 = [];
+        // let c3 = 1;
+        // while (c3 <= l3) {
+        //     const v3 = prompt('Input the element ' + c3 + ' of array');
+        //     arr3.push(v3);
+        //     c3++;
+        // }
+        // console.log(arr3);
+
+        // Типы данных
+        const backValue = 0;
+        const a = 10; // - тип 'number' - целое число (-2^53 < number < 2^53)
+        const ae = 10e6; // 10 000 000 - тип 'number' - целое число (-2^53 < number < 2^53)
+        const b = 10.5; // - так же тип 'number' - дробное число
+        const d = Infinity; // - так же тип 'number' - бесконечное число (может быть отрицательным -Infinity)
+        const c = 10 / 0;
+        const summ = 10 + 10; // - получится тип 'number' - выражение
+        const str1 = "Hello ${summ}" // тип string - строка
+        const str2 = 'Hello ${summ}' // тип string - строка
+        const str3 = `Hello ${summ}` // тип string - строка
+        const nn = (str1/0);
+        const tr = true;
+        const fa = false;
+        maxn = Number.MAX_VALUE; // maximal value of int
+        maxnb = maxn + 10; //bigint
+        maxnb2 = 10n; //bigint
+        
+        console.log('Type of a is',typeof(a)); // -> number
+        console.log('Type of ae is',typeof(ae)); // -> number
+        console.log('Type of b is',typeof(b)); // -> number
+        console.log('Type of d is',typeof(d)); // -> number 
+        console.log('Type of c is',typeof(c), 'but value is',c); // -> number, а значение - Infinity
+        console.log('Type of str1 is',typeof(str1)); // -> string
+        console.log('Type of str2 is',typeof(str2)); // -> string
+        console.log('Type of str3 is',typeof(str3)); // -> string
+        console.log('Type of str1/0 is',typeof(nn), 'but value is', nn); // -> number, а значение - NaN
+        console.log(str1); // -> ${summ} string ""
+        console.log(str2); // -> ${summ} string ''
+        console.log(str3); // -> ${summ} number ``
+        console.log('Type of tr is',typeof(tr)); // -> boolean
+        console.log('Type of fa is',typeof(fa)); // -> boolean
+        console.log('Boolean of number is',Boolean(a)); // -> boolean
+        console.log('Boolean of 0 (zero) is',Boolean(c)); // -> boolean of zero is false
+        console.log('Boolean of " " is',Boolean(" ")); // -> boolean
+        console.log('Boolean of "" is',Boolean("")); // -> boolean of empty value is false
+        console.log('Boolean of "!a" is',Boolean(!a)); // -> boolean of !value is false
+        console.log('Max number of integer is', maxn, 'Type of is', typeof(maxn));
+        console.log('Max number of integer is', maxnb, 'Type of is', typeof(maxnb)); // должен быть тип bigint
+        console.log('Max number of integer is', maxnb2, 'Type of is', typeof(maxnb2)); // тип bigints
+        
+        // Объекты - тип данных, хранящий значения и свойства
+        obj = {
+            name: 'John',
+            age: 24
+        }
+        function func() {
+            sum = a + b;
+        }
+        arr = [1,2,3,4,5];
+        console.log('Type of obj is',typeof(obj));
+        console.log('Type of func is',typeof(func));
+        console.log('Type of arr is',typeof(arr));
+
+        // Array, Object, function - примитивные типы данных
+        // Array, Object, function - сложные типы данных
+    </script>
+</body>
+</html>
