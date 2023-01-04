@@ -60,45 +60,76 @@
 
         // Задание 1. Прямая последовательность
         let i1 = 1;
-        let str1 = "";
+        let stri1 = "";
         while (i1 <= 5) {
-            // console.log(i);
-            str1 += ' ' + i1;
+            // console.log(i1);
+            stri1 += i1 + ' '; // для вывода последовательности в одну строку через пробел
             i1++
         }
+        // console.log(stri1);
+        
+        let strj1 = "";
         for (let j1 = 1; j1 < 6; j1++) {
             // console.log(j1);
-            str1 += ' ' + j1;
+            strj1 += j1 + ' '; // для вывода последовательности в одну строку через пробел
         }
-
+        // console.log(strj1);
+        
         // Задание 2. Обратная последовательность
-        let i2 = 1;
-        let str2 = '';
-        while (i2 <= 5) {
-            // console.log(6 - i2);
-            i2++
+        let i2 = 5;
+        let stri2 = '';
+        while (i2 > 0) {
+            // console.log(i2);
+            stri2 += i2 + ' '; // для вывода последовательности в одну строку через пробел
+            i2--
         }
-        for (let j2 = 1; j2 < 6; j2++) {
-            str2 += ' ' + (6 - j2);
-            // console.log(6 - j2);
+        // console.log(stri2);
+        
+        let strj2 = '';
+        for (let j2 = 5; j2 > 0; j2--) {
+            strj2 += j2 + ' '; // для вывода последовательности в одну строку через пробел
+            // console.log(j2);
         }
-        // console.log(str2);
+        // console.log(strj2);
 
         // Задание 3. Таблица умножения на 3
+        // console.log("multiplication table for 3 by while:")
         let i3 = 1;
         while (i3 < 10) {
-            console.log('3 x ' + i3 + ' = ' + 3 * i3);
+            // console.log('3 x ' + i3 + ' = ' + 3 * i3);
             i3++;
         }
+        
+        // console.log("multiplication table for 3 by for:")
+        for (let j3 = 1; j3 < 10; j3++) {
+            // console.log('3 x ' + j3 + ' = ' + 3 * j3);
+        }
 
-
-        // let sum = 0;
+        // Задание 4. Сумма последовательных натуральных чисел до числа, введенного пользователем
+        let numi = 1;
+        let sumi = 0;
+        // const numin1 = +prompt("Input the natural number:");
+        // while (numi <= numin1) {
+        //     sumi += numi;
+        //     numi++;
+        // }
+        // console.log("Summ is", sumi);
+        
+        const numin2 = +prompt("Input the natural number:");
+        let sumj = 0;
+        for (let numj = 1; numj <= numin2; numj++) {
+            sumj += numj;
+        }
+        console.log("Summ is", sumj);
+        
+        
+        // let sum1 = 0;
         // while (true) {
         //     const answer = +prompt("Input the number:");
         //     if (!answer) break;
-        //     sum += answer;
+        //     sum1 += answer;
         // }
-        // console.log("Summ is", sum);
+        // console.log("Summ is", sum1);
 
         // let number = 2;
         // while (number < 10) {
