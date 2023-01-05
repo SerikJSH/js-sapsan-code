@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14(13) Arrays - Homework</title>
+</head>
+
+<body>
+    <script>
+        const arrOddNums = [];
+        for (i1 = 1; i1 <= 99; i1 += 2) {
+            arrOddNums.push(i1);
+        }
+        console.log('The array of odd numbers from 1 to 99 contains:', arrOddNums.length, 'elements:', arrOddNums);
+
+        const arrEvenNums = [];
+        let sum = 0;
+        for (i2 = 2; i2 <= 20; i2 += 2) {
+            arrEvenNums.push(i2);
+            sum += i2;
+        }
+        console.log('The array of even numbers from 2 to 20 contains:', arrEvenNums.length, 'elements:', arrEvenNums);
+        console.log('The sum of elements of array of even numbers from 2 to 20 is:', sum);
+
+    </script>
+</body>
+
+</html>
