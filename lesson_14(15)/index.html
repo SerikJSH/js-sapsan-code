@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14 (15) - Functions</title>
+</head>
+
+<body>
+    <script>
+        // вызывать функцию в JavaScript можно с любой строки кода
+        function showMessage(msg) {
+            // alert("Hi all!");
+            alert(msg);
+        }
+        // showMessage();
+        // showMessage("Привет!");
+
+        function strS(a, b) {
+            alert(a + b);
+        }
+        // strS("Hello", "World");
+
+        function sumN(a = 7, b = 10) { // b = 10 - присвоится это значение, если не было задано при вызове функции
+            console.log(a);
+            console.log(b);
+            console.log(a + b);
+        }
+        // sumN(5); 
+        // sumN(5, 6);
+        // sumN();
+
+        const sum2 = (x = 3, y = 4) => { // стрелочная функция
+            console.log(x + y);
+        }
+
+        const nameB = showName();
+        function showName() {
+            const nameB = "Batyr";
+            // console.log(nameB);
+            return nameB;
+        }
+        // console.log(nameB);
+        // showName();
+
+        function sum3(a, b) {
+            return a + b; // без return значение не будет доступно за пределами функции
+        }
+        // const res = sum3(10, 14);
+        // console.log(res);
+        // showMessage(res);
+
+        let msg2 = "Batyr";
+
+        function showMsg() { // если функция не найдет переменную внутри своего блока, то она будет искать её на один уровень выше
+            console.log(msg2);
+        }
+        // showMsg("Anna");
+
+        function checkRole(name) {
+            if (name == "Olga") {
+                return role = "admin";
+            } else if (name == "Mila") {
+                return role = "user";
+            }
+        }
+        function checkAccess(role) {
+            if (role == "admin") {
+                alert("Welcome, " + name + "! Access allowed!");
+            } else if (role == "user") {
+                alert("Sorry, " + name + "! Access denied!");
+            } else {
+                alert("I don't know you, " + name + "! Access denied!");
+            }
+        }
+        
+        let name = prompt("Who are you?");
+        
+        checkAccess(checkRole(name));
+
+
+    </script>
+</body>
+
+</html>
