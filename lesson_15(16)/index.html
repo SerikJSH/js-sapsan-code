@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 15 - Objects</title>
+</head>
+
+<body>
+    <script>
+        // const user = {
+        //     username: "mrwvg", // пара ключ-значение
+        //     password: "test123",
+        //     email: "mr@mail.ru",
+        //     phoneNumber: "+77777777777",
+        //     age: 21,
+        //     location: {
+        //         city: "Almaty",
+        //         country: "Kazakhstan"
+        //     },
+        //     greeting: function() {
+        //         console.log("Hello World!")
+        //     }
+        // }
+
+        // console.log(typeof user.username);
+        // console.log(typeof user.age);
+        // console.log(user.location.city);
+        // user.greeting();
+
+        function makeUser(name, email) {
+            const user = {
+                name: name,
+                email: email
+            };
+            return user;
+        }
+
+        // let yes = "";
+        // const base =[];
+        // while (yes != "n") {
+        // let name = prompt("Input the username");
+        // let email = prompt("Input the email");
+        // // base = base.push(makeUser(name, email));
+        // // let yes = prompt("More?")
+        // user1 = makeUser(name, email);
+        // }
+        // user1 = makeUser("qwert", "asd");
+        // user2 = makeUser("qwert", "asd");
+        // console.log(user1);
+        // console.log(user2);
+        // console.log(user1 == user2); // false, т.к. объекты хранятся в разных ячейках памяти и сравниваются по ссылкам
+
+
+        // let key = "fav count";
+
+        // const a = {
+        //     count: 25,
+        //     "fav count": 7
+        // }
+
+        // // const b = a;
+        // const b = Object.assign({name: "test"}, a);
+        // console.log(a);
+        // console.log(b);
+        // b.count = 20;
+        // console.log(a);
+        // console.log(b);
+        // console.log(a["fav count"]);
+
+        // let info = prompt("What do you want to know about user?", "name");
+        // const user = {
+        //     name: "Arnur",
+        //     age: 21,
+        //     [info]: "Astana"
+        // }
+        // user.country = "Kazakhstan";
+
+        // console.log(user[info]);
+        // console.log(user);
+
+        function makeUser(username, password) {
+            const user = {
+                username,   //короткая запись, когда название ключа совпадает с параметром фукции
+                password
+            }
+        }
+
+        const user = {
+            for: 10,
+            if: 15,
+            return: 25
+        }
+
+        const user2 = {
+            username: 'mrwvg',
+            password: 'test123',
+            email: 'mr@mail.ru',
+            phone: '1234567'
+        }
+
+        if (user2.phone === undefined) {
+            console.log("No value");
+        }
+
+        let key = "phone";
+        if (key in user2) {
+            console.log(user2[key]);
+        } else {
+            console.log("No value!");
+        }
+
+        user2.city = 'Almaty';
+        console.log(user2);
+        user2.city = 'Astana';
+        console.log(user2);
+        delete user2.password;
+        console.log(user2);
+        console.log(user2.username);
+        console.log(user2.email);
+
+        for (let key in user2) { // это НЕ ЦИКЛ, а перебор значений
+            console.log(user2[key]);
+        }
+
+        const a = new Object({ // второй способ создания Объекта (ООП)
+            name: "test"
+        })
+        console.log(a);
+
+        // JSON
+        const param = {
+            username: "Serik",
+            password: "Jalala"
+        }
+        let pJSON = JSON.stringify(param); // это уже объект, а не строка
+        console.log('param =', param);
+        console.log('JSON param is string:', pJSON);
+        let parseJSON = JSON.parse(pJSON);
+        console.log('Again param is Object:', parseJSON);
+
+        // REST API (не важно время, статичные страницы) and WebSockets (важно время изменений, например биржи) - взаимодействие с пользователем
+
+    </script>
+</body>
+
+</html>

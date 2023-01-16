@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14(15) Homework - Calculator</title>
+</head>
+
+<body>
+    <script>
+        function addition(a = 0, b = 0) {
+            return a + b;
+        }
+        function minus(a = 0, b = 0) {
+            return a - b;
+        }
+        function multiplication(a = 0, b = 0) {
+            return a * b;
+        }
+        function division(a = 0, b = 1) {
+            return a / b;
+        }
+
+        operation = "";
+
+        while (operation.toLowerCase != "stop") {
+            const operation = prompt("Please select the Math operator (+, -, *, /)");
+            const a = +prompt("Please input the first number");
+            const b = +prompt("Please input the second number");
+            if (operation == "+") {
+                console.log(addition(a, b));
+            }
+            else if (operation == "-") {
+                console.log(minus(a, b));
+            }
+            else if (operation == "*") {
+                console.log(multiplication(a, b));
+            }
+            else if (operation == "/") {
+                console.log(division(a, b));
+            }
+            console.log(operation);
+            console.log(a, b);
+        }
+
+    </script>
+</body>
+
+</html>
