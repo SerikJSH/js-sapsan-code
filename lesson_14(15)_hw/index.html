@@ -23,27 +23,38 @@
             return a / b;
         }
 
-        operation = "";
+        // let operation = "";
 
-        while (operation.toLowerCase != "stop") {
-            const operation = prompt("Please select the Math operator (+, -, *, /)");
-            const a = +prompt("Please input the first number");
-            const b = +prompt("Please input the second number");
+        // while (operation.toLowerCase !== "stop") {
+        do {
+            var operation = prompt("Please select the Math operator (+, -, *, /)");
+            if (operation.toLocaleLowerCase == "stop") {
+                console.log('Good bye!');
+                break;
+            }
+            let a = +prompt("Please input the first number");
+            let b = +prompt("Please input the second number");
+
             if (operation == "+") {
-                console.log(addition(a, b));
+                // console.log(addition(a, b));
+                console.log(`${a} ${operation} ${b} = ${addition(a, b)}`);
             }
             else if (operation == "-") {
-                console.log(minus(a, b));
+                // console.log(minus(a, b));
+                console.log(`${a} ${operation} ${b} = ${minus(a, b)}`);
             }
             else if (operation == "*") {
-                console.log(multiplication(a, b));
+                // console.log(multiplication(a, b));
+                console.log(`${a} ${operation} ${b} = ${multiplication(a, b)}`);
             }
             else if (operation == "/") {
-                console.log(division(a, b));
+                // console.log(division(a, b));
+                console.log(`${a} ${operation} ${b} = ${division(a, b)}`);
+            } else {
+                console.log('Unknown operator. Please try again.');
             }
-            console.log(operation);
-            console.log(a, b);
-        }
+
+        } while (operation.toLocaleLowerCase != "stop");
 
     </script>
 </body>
