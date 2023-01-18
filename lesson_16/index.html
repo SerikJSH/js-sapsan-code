@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16 - DOM</title>
+</head>
+
+<body>
+    <p id="test">Hello, <b id="span-text">World!!</b></p>
+    <p class="test2">World!!!</p>
+    <div id="test">Hello, <b>Honey!!</b></div>
+    <div id="cards">
+        <div class="cards-item" onclick="handleClick()"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item" style="cursor: pointer;"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+        <div class="cards-item"></div>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <ul>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <p class="inner-text">Ttext</p>
+
+    <script>
+        // DOM - Document Object Model - объектная модель документа, с помощью которой можно получить доступ к свойствам HTML из JavaScript. Названия свойств в коллекции пишутся через camelCase, например background-color (CSS) = backgroundColor (DOM)
+
+        // const doc = {
+        //     body: {
+        //         style: {
+        //             backgroundColor: ""
+        //         }
+        //     }
+        // }
+
+        // doc.body.style.backgroundColor = "red";
+
+        const elem = document.getElementById("test"); // доступ к элементу по ID
+        // console.log(elem.innerText); 
+        // console.log(elem.innerHTML);
+        // elem.innerText = "Hello <em>dude!</em>"; // выводит на экран весь текст, без учета тегов
+        // elem.innerHTML = "Hello <em>dude!</em>"; // выводит на экран текст с учетом тегов
+
+        // При нахождении разных тегов, но с одним ID, будет выведен первый построчно, а остальные будут проигнорированы
+
+        const elem2 = document.getElementsByTagName("p"); // доступ к элементу по имени тега
+        const elem3 = document.getElementsByClassName("test2"); // доступ к элементу по имени класса
+        // console.log(elem2); // это HTML-коллекция, а не массив со своими методами
+        // console.log(elem2.length);
+        // console.log(elem2[0]);
+        // console.log(elem2[0].children);
+
+        for (let i = 0; i < elem2.length; i++) {
+            elem2[i].style.color = "green";
+            elem2[i].style.fontSize = "30px";
+        }
+        for (let i = 0; i < elem3.length; i++) {
+            elem3[i].style.color = "blue";
+            elem3[i].style.fontSize = "30px";
+        }
+
+        const cards = document.getElementById("cards");
+        const cardsItem = document.getElementsByClassName("cards-item");
+
+        cards.style.display = "flex";
+        cards.style.gap = "10px";
+        cards.style.flexWrap = "wrap";
+        cards.style.justifyContent = "center";
+
+        for (let i = 0; i < cardsItem.length; i++) {
+            cardsItem[i].style.height = "100px";
+            cardsItem[i].style.width = "100px";
+            cardsItem[i].style.backgroundColor = "green";
+        }
+
+        const nthChildElem3 = document.querySelector(".cards-item:nth-child(3)");
+        nthChildElem3.style.backgroundColor = "red";
+
+        const evenElem = document.querySelectorAll(".cards-item:nth-child(even)");
+        for (let i = 0; i < evenElem.length; i++) {
+            evenElem[i].style.backgroundColor = "blue";
+        }
+        
+        const evenElemLi = document.querySelectorAll("ul > li:last-child"); // будет выбран только следующий по вложенности 
+        const evenElemLi2 = document.querySelectorAll("ul li:last-child"); // будут выбраны все дочерние вложенности
+        console.log(evenElemLi[0].innerText);
+        console.log(evenElemLi[1].innerText);
+        for (let i = 0; i < evenElemLi.length; i++) {
+            evenElemLi[i].style.color = "red";
+        }
+
+        const firstChild = document.querySelector(".cards-item:first-child");
+        console.log(firstChild);
+        firstChild.style.cursor = "pointer";
+
+        // DOM Events
+        function handleClick() {
+            const innerTextContainer = document.querySelector('.inner-text');
+            innerTextContainer.innerText = "Clicked!"
+        }
+
+    </script>
+</body>
+
+</html>
