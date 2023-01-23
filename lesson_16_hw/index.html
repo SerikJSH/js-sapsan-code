@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16 Homework - DOM</title>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div id="text">Something text!</div>
+        <div>
+            <button id="hideBtn" onclick="hideText('text','hideBtn')"><b>Hide</b> this text</button>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <button id="hideSelf" onclick="hideButton('hideSelf')">Press to hide me</button>
+    </div>
+    <hr>
+
+    <div>
+        <input type="text" id="idInput" value="Some text">
+        <button onclick="changeInputText('idInput')">Press me to change text</button>
+    </div>
+    <hr>
+
+    <div>
+        <input type="text" id="idNum" placeholder="input number to calculate">
+        <button onclick="squareOfNumber('idNum')">Press me to output square of number</button>
+    </div>
+    <hr>
+
+    <div style="display: flex;">
+        <input type="text" id="idTxt1" placeholder="input some text">
+        <input type="text" id="idTxt2" placeholder="input some text">
+        <button onclick="swapText('idTxt1', 'idTxt2')">Swap text</button>
+    </div>
+    <hr>
+
+    <div>
+        <input type="text" id="idTxtClr" value="Some text">
+        <button onclick="changeTextColor('idTxtClr')">Press me to change color of the text</button>
+    </div>
+
+    <script>
+        function hideText(idTxt, idBtn) {
+            if (document.getElementById(idTxt).style.display === "none") {
+                document.getElementById(idTxt).style.display = "block";
+                document.getElementById(idBtn).innerHTML = "<b>Hide</b> this text";
+            } else {
+                document.getElementById(idTxt).style.display = "none";
+                document.getElementById(idBtn).innerHTML = "<b>Show</b> hiden text";
+            }
+        }
+
+        function hideButton(idBtn) {
+            document.getElementById(idBtn).style.display = "none";
+        }
+
+        function changeInputText(idInp) {
+            document.getElementById(idInp).value = "Other text";
+        }
+
+        function squareOfNumber(idInp) {
+            alert(`${document.getElementById(idInp).value} ^ 2 = ` + document.getElementById(idInp).value ** 2);
+        }
+
+        function swapText(idTxt1, idTxt2) {
+            let Txt1 = document.getElementById(idTxt1).value;
+            let Txt2 = document.getElementById(idTxt2).value;
+            document.getElementById(idTxt1).value = Txt2;
+            document.getElementById(idTxt2).value = Txt1;
+        }
+
+        function changeTextColor(idTxt) {
+            document.getElementById(idTxt).style.color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+    </script>
+</body>
+
+</html>
