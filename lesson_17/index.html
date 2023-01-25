@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 17 - HTTP and API</title>
+</head>
+
+<body>
+    <!--     
+    Четыре вида действий с ресурсами на уровне HTTP-методов:
+        GET - получение ресурса
+        POST - создание ресурса
+        PUT - обновление ресурса
+        DELETE - удаление ресурса
+    -->
+
+    <script>
+        let data;
+
+        function first(callback) {
+            setTimeout(function () {
+                data = [1, 2, 3, 4, 5];
+                console.log(1);
+                callback(); // - функция отработает после получения данных
+            }, 2000); // JavaScript не блокирует весь поток, поэтому эта функция отложится, но остальной код продолжит работать
+        }
+        function second() {
+            console.log(2);
+            console.log(data);
+        }
+
+        // first(second);
+        // second();
+
+        // function loadScript(src, callback) {
+        //     let script = document.createElement("script");
+        //     // script.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js";
+        //     script.src = src;
+        //     script.onload = () => console.log("Script loaded!")
+        //     script.onload = () => callback();
+        //     document.body.append(script);
+        // }
+
+        // loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', function(){
+        //     loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js'), function(){
+        //         loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js'), function(){
+        //             loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js'), function(){
+
+        //             }
+        //         }
+        //     }
+        // });
+
+        // baseSortBy();
+
+        // let promise = new Promise(function (resolve, reject) {
+        //     // resolve('Сингл вышел!');
+        //     // resolve({ a: 15 });
+        //     // resolve([1, 2, 3, 4]);
+        //     reject('Сингла не будет');
+        // })
+
+        // promise
+        //     .then((result) => console.log(result))
+        //     .catch((err) => console.log(err));
+
+
+        // AJAX - fetch
+        let promise2 = fetch('https://jsonplaceholder.typicode.com/users');
+
+        // console.log(promise2);
+        // promise2
+        //     .then((result) => console.log(result))
+        //     .then((data) => console.log(data));
+
+        promise2
+            .then(function(result){
+                return result.json();
+            })
+            .then(function(data){
+                for (let i = 0; i < data.length; i++){
+                    const element = document.createElement('p');
+                    element.innerText = data[i].name;
+                    document.body.append(element);
+                }
+            })
+    </script>
+</body>
+
+</html>
