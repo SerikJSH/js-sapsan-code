@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 19 - </title>
+</head>
+
+<body>
+    <button>Btn</button>
+
+    <script>
+        function first() {
+            console.log(1);
+        }
+        function second() {
+            // while (true) {
+
+            // }
+            console.log(2);
+        }
+        function third() {
+            console.log(3);
+        }
+
+        first();
+        second();
+        third();
+
+        function outer() {
+            function inner() {
+                console.log("Test");
+            }
+            inner();
+        }
+        // Колл стэк
+        outer();
+
+        // сначала отрабатывается JS, потом загружается UI
+        // код в JS выполняется однопоточно построчно
+        // функция setTimeout(f(), time) - не выполняет функцию f() через time миллисекунд, а ставит f() в очередь
+        // EventLoop следит за очередью и наличием места в CallStack
+
+        function getMockData() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    //sresolve(JSON.stringify([1, 2, 3]), 2000);
+                    reject("Err0r")
+                })
+            })
+        }
+        console.log(getMockData());
+        const result = getMockData();
+        result
+            .then(function (result) {
+                return JSON.parse(result);
+            })
+            .then(function (data) {
+                console.log(data)
+            })
+            .catch(function (err) {
+                const ppp = document.createElement("p");
+                ppp.innerText = err;
+                ppp.style.color = "red";
+                document.body.append(ppp);
+            })
+    </script>
+</body>
+
+</html>
