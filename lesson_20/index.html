@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 20 - Application developing (ToDo)</title>
+    <!-- <script src="js/script.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>My ToDo List</h1>
+
+        <form id="newtask">
+            <input class="task-inp" type="text" placeholder="Add a task">
+            <button id="push">Add</button>
+        </form>
+        <ul class="todo-list"></ul>
+    </div>
+
+    <script>
+        const form = document.querySelector('#newtask');
+        const tasks = [];
+        // console.log("Form:", form);
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // отключение дефолтного поведения формы
+            // console.log("Event:", event);
+            const input = document.querySelector('.task-inp');
+            if (input.value.trim().length == 0) {
+                console.log("Sorry, can't add empty task")
+            } else {
+                const text = input.value.trim(); // вырезает пробельные значения
+                // console.log("Input:", input);
+                // console.log("Text:", JSON.stringify(text));
+                addTodoItem(text);
+                console.log(tasks);
+                input.value = "";
+            }
+        })
+
+        const todo = {
+                // id: Date.now(),
+                // taskName: "Buy a cake",
+                // done: false
+            }
+            // console.log(todo);
+
+        function addTodoItem(text) {
+            const todo = {
+                id: Date.now(),
+                taskText: text,
+                done: false
+            }
+            tasks.push(todo);
+            renderItem(todo);
+        }
+
+        function renderItem(newTodoItem) {
+            const todoList = document.querySelector('.todo-list');
+            const li = document.createElement('li');
+            li.innerHTML = `
+            <span>${newTodoItem.taskText}</span>
+            <button>Delete</button>
+            `
+            todoList.append(li);
+        }
+    </script>
+</body>
+
+</html>
