@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 20 - Application developing (ToDo)</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- <script src="js/script.js"></script> -->
 </head>
 
@@ -22,7 +23,7 @@
 
     <script>
         const form = document.querySelector('#newtask');
-        const tasks = [];
+        let tasks = [];
         // console.log("Form:", form);
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // отключение дефолтного поведения формы
@@ -57,16 +58,60 @@
             renderItem(todo);
         }
 
-        function renderItem(newTodoItem) {
+        function renderItem(newTodoItem) { // только работа с тегом "ui"
+            const item = document.querySelector(`[data-key='${newTodoItem.id}']`);
+            if (newTodoItem.isDeleted) {
+                item.remove();
+                return;
+            }
             const todoList = document.querySelector('.todo-list');
             const li = document.createElement('li');
+            li.setAttribute('class', 'todo-item'); // создание аттрибута "class" тегу "li"
+            li.setAttribute('data-key', newTodoItem.id); // создание аттрибута "class" тегу "li"
             li.innerHTML = `
+            <input type="checkbox"/>
             <span>${newTodoItem.taskText}</span>
-            <button>Delete</button>
+            <button id=${newTodoItem.id} onclick="deleteTodoItem(event)">Delete</button>
             `
             todoList.append(li);
         }
+
+        function deleteTodoItem(event) {
+            const index = tasks.findIndex(function(element) {
+                return element.id === +event.target.parentElement.dataset.key
+            })
+            console.log('INDEX:', index);
+            const todo = {
+                    ...tasks[index],
+                    isDeleted: true
+                }
+                // console.log(todo);
+            console.log('Deleted)', event.target.parentElement.dataset.key);
+
+            tasks = tasks.filter(function(element) {
+                return element.id !== +event.target.parentElement.dataset.key;
+            })
+            console.log(tasks);
+            renderItem(todo);
+        }
+
+        // const element = document.createElement('div');
+        // element.innerHTML = "<span>Hello, World</span>";
+        // element.setAttribute('data-color', 'red');
+        // document.body.append(element);
+
+        // const button = document.createElement('button');
+        // button.innerHTML = "Change color";
+        // button.addEventListener('click', function() {
+        //     element.style.color = event.target.parentElement.dataset.color;
+        //     console.log("Work!", event.target.parentElement.dataset.color);
+        // })
+        // element.append(button);
     </script>
+
+    <!-- <button onclick="delete[document.getElementById(`${newTodoItem.id}`).id.value]">Ky</button> -->
+
+
 </body>
 
 </html>
