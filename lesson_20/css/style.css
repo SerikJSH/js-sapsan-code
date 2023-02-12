@@ -13,3 +13,8 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+.todo-item-done {
+    color: green;
+    text-decoration: line-through;
+}

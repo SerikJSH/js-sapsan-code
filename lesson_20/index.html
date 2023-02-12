@@ -22,8 +22,10 @@
     </div>
 
     <script>
+        // localStorage.setItem('test', 100);   
+
         const form = document.querySelector('#newtask');
-        let tasks = [];
+        let todoItems = [];
         // console.log("Form:", form);
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // отключение дефолтного поведения формы
@@ -36,7 +38,7 @@
                 // console.log("Input:", input);
                 // console.log("Text:", JSON.stringify(text));
                 addTodoItem(text);
-                console.log(tasks);
+                console.log(todoItems);
                 input.value = "";
             }
         })
@@ -54,44 +56,67 @@
                 taskText: text,
                 done: false
             }
-            tasks.push(todo);
+            todoItems.push(todo);
             renderItem(todo);
+            // alert(localStorage.getItem('test'));
         }
 
         function renderItem(newTodoItem) { // только работа с тегом "ui"
+            localStorage.setItem('todoItems', JSON.stringify(todoItems)); // сохранение задач в LocalStorage браузера
             const item = document.querySelector(`[data-key='${newTodoItem.id}']`);
             if (newTodoItem.isDeleted) {
                 item.remove();
                 return;
             }
+
+            let isDone = "";
+            if (newTodoItem.done) {
+                isDone = "todo-item-done";
+            }
+
             const todoList = document.querySelector('.todo-list');
             const li = document.createElement('li');
             li.setAttribute('class', 'todo-item'); // создание аттрибута "class" тегу "li"
             li.setAttribute('data-key', newTodoItem.id); // создание аттрибута "class" тегу "li"
             li.innerHTML = `
-            <input type="checkbox"/>
-            <span>${newTodoItem.taskText}</span>
-            <button id=${newTodoItem.id} onclick="deleteTodoItem(event)">Delete</button>
+            <input type="checkbox" id="${newTodoItem.id}" onclick="toggleTodoItem()"/>
+            <span class="${isDone}">${newTodoItem.taskText}</span>
+            <button onclick="deleteTodoItem(event)">Delete</button>
             `
-            todoList.append(li);
+            if (item) {
+                todoList.replaceChild(li, item); // заменяет элемент li если он уже существует
+            } else {
+                todoList.append(li);
+            }
+        }
+
+        function toggleTodoItem() {
+            const index = todoItems.findIndex(function(element) {
+                    return element.id === +event.target.parentElement.dataset.key;
+                })
+                // console.log('INDEX:', index);
+                // console.log(todoItems[index].id);
+            todoItems[index].done = !todoItems[index].done;
+            console.log(todoItems);
+            renderItem(todoItems[index]);
         }
 
         function deleteTodoItem(event) {
-            const index = tasks.findIndex(function(element) {
-                return element.id === +event.target.parentElement.dataset.key
+            const index = todoItems.findIndex(function(element) {
+                return element.id === +event.target.parentElement.dataset.key;
             })
             console.log('INDEX:', index);
             const todo = {
-                    ...tasks[index],
+                    ...todoItems[index],
                     isDeleted: true
                 }
                 // console.log(todo);
             console.log('Deleted)', event.target.parentElement.dataset.key);
 
-            tasks = tasks.filter(function(element) {
+            todoItems = todoItems.filter(function(element) {
                 return element.id !== +event.target.parentElement.dataset.key;
             })
-            console.log(tasks);
+            console.log(todoItems);
             renderItem(todo);
         }
 
