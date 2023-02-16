@@ -57,12 +57,13 @@
                 done: false
             }
             todoItems.push(todo);
+            // localStorage.setItem('task', JSON.stringify(todo)); // сюда лучше не добавлять
             renderItem(todo);
             // alert(localStorage.getItem('test'));
         }
 
         function renderItem(newTodoItem) { // только работа с тегом "ui"
-            localStorage.setItem('todoItems', JSON.stringify(todoItems)); // сохранение задач в LocalStorage браузера
+            localStorage.setItem('tasks', JSON.stringify(todoItems)); // сохранение задач в LocalStorage браузера
             const item = document.querySelector(`[data-key='${newTodoItem.id}']`);
             if (newTodoItem.isDeleted) {
                 item.remove();
@@ -119,6 +120,18 @@
             console.log(todoItems);
             renderItem(todo);
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks'));
+            if (tasks) {
+                todoItems = tasks;
+                console.log(tasks);
+                for (let i = 0; i < tasks.length; i++) {
+                    // console.log(tasks[i]);
+                    renderItem(tasks[i]);
+                }
+            }
+        });
 
         // const element = document.createElement('div');
         // element.innerHTML = "<span>Hello, World</span>";
