@@ -1,7 +1,7 @@
 // console.log('Hello!');
 
 // npm - NodeJS Package Manager
-// paclage.json - файл с описаниями и инструкциями
+// package.json - файл с описаниями и инструкциями
 // Express - фреймворк для разработки на NodeJS
 
 const http = require('http');
