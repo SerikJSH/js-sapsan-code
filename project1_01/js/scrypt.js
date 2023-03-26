@@ -50,5 +50,5 @@ function addDevice() {
         inStock: true,
         isDeleted: false
     }
-    devices.push(todo);
+    devices.push(device);
 }
