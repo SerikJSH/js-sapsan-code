@@ -5,7 +5,7 @@ function render() {
   productsPage.render();
 }
 
-spinnerPage.render;
+// spinnerPage.render;
 
 let CATALOG = [];
 
