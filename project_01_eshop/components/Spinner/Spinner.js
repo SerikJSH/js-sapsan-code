@@ -1,8 +1,12 @@
 class Spinner {
+  handleClear() {
+    ROOT_SPINNER.innerHTML = "";
+  }
+
   render() {
-    html = `
+    const html = `
         <div class="spinner-container">
-            <img class="spinner__img" src="components/Spinner/img/Ellipsis-2s-200px.svg" />
+            <img class="spinner__img" src="/components/Spinner/img/Ellipsis-2s-200px.svg">
         </div>
     `;
 

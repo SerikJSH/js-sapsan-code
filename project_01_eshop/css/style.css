@@ -4,6 +4,8 @@
     --color-unaccent: gray;
     --color-medium: lightgray;
     --color-dark: darkgray;
+    --color-error-light: hotpink;
+    --color-error-dark: deeppink;
 
     --spacing-small: 10px;
     --spacing-medium: 15px;

@@ -5,16 +5,22 @@ function render() {
   productsPage.render();
 }
 
-// spinnerPage.render;
+spinnerPage.render();
+console.log(spinnerPage.error);
 
 let CATALOG = [];
 
-fetch('server/catalog.json')
-  .then(res => res.json())
-  .then(body => {
+fetch("server/catalog.json")
+  .then((res) => res.json())
+  .then((body) => {
     CATALOG = body;
-    render();
+    setTimeout(() => {
+      spinnerPage.handleClear();
+      render();
+    }, 1000);
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
+    spinnerPage.handleClear();
+    errorPage.render();
   });
